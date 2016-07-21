@@ -1,0 +1,50 @@
+MAP
+  IMAGETYPE "png"
+  NAME "time_example"
+  SIZE 600 600
+  STATUS ON
+  UNITS METERS
+
+  OUTPUTFORMAT
+    NAME "png"
+    MIMETYPE "image/png"
+    DRIVER "AGG/PNG"
+    EXTENSION "png"
+    IMAGEMODE RGB
+    TRANSPARENT TRUE
+  END # OUTPUTFORMAT
+
+  include "includes/projections/3338.include.map"  
+  DEBUG 5
+  SHAPEPATH "."
+  CONFIG "MS_ERRORFILE" "/dev/stderr"
+
+  EXTENT -3000000.000000 -1000000.000000 3000000.000000 3000000.000000
+
+
+  WEB
+    FOOTER ""
+    HEADER ""
+    TEMPPATH ""
+    METADATA
+      "ows_onlineresource"      "http://spam.gina.alaska.edu/cimes/example_time"
+      "ows_enable_request"      "*"
+      "ows_srs" "EPSG:3572 EPSG:3857 EPSG:3338"
+      "ows_title"       "Time Example"
+    END # METADATA
+    TEMPLATE "[templatepath]"
+  END # WEB
+
+  include "includes/layers/3338/dnb.layers.map"
+  include "includes/layers/3338/i5.layers.map"
+  include "includes/layers/3338/landcover_alt.layers.map"
+  include "includes/layers/3338/modis_landcover.layers.map"
+  include "includes/layers/3338/natural_color.layers.map"
+  include "includes/layers/3338/snowcover_alt.layers.map"
+  include "includes/layers/3338/snowcover.layers.map"
+  include "includes/layers/3338/viirs_land_color.layers.map"
+  include "includes/layers/3338/viirs_natural_color.layers.map"
+
+
+END # MAP
+

@@ -1,0 +1,22 @@
+  LAYER
+    TILEINDEX "/ogc/maps/cimes/indexs/sorted_3_6_7_alaska_albers.list.time.shp"
+    DEBUG ON
+
+    #EXTENT -3000000.000000 -1000000.000000 3000000.000000 3000000.000000
+    METADATA
+        "ows_title"             "MODIS Snowcover"
+        "wms_timedefault"       "2016-07-13 19:43:00"
+        "wms_timeitem"          "time"
+        "wms_timeextent"        "2007-08-07 15:53:00/2016-07-13 19:43:00/PT1H"
+    END # METADATA
+    NAME "MODIS Snowcover"
+    GROUP "MODIS"
+    
+    include "includes/projections/3338.include.map"
+
+    FILTER ([time] = "2016-07-13 19:43:00")
+
+    STATUS ON
+    TYPE RASTER
+  END # LAYER
+
