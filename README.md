@@ -34,3 +34,5 @@ The basic workflow is like this:
 .* Sample url would look something like this:
 ..* http://spam.gina.alaska.edu/cimes/example_time?TIME=2016-07-14T01:00:00/2016-07-15T01:00:00&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&BBOX=-1005890.51145988353528082,489978.97281411895528436,1601965.55439768708311021,2622408.19556628772988915&CRS=EPSG:3338&WIDTH=1119&HEIGHT=915&LAYERS=VIIRS%20Landcover&STYLES=&FORMAT=image/png&DPI=72&MAP_RESOLUTION=72&FORMAT_OPTIONS=dpi:72&TRANSPARENT=TRUE
 
+The active URL is *http://spam.gina.alaska.edu/cimes/example_time* . 
+
